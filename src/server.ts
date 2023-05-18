@@ -1,10 +1,13 @@
 import fastity from 'fastify'
+import { PrismaClient } from '@prisma/client'
 //CRIAR APP COM FRAMEWORK FASTITY. VARIAVEL CONSTANTE UTILIZANDO O FASTITY COMO UMA FUNCAO
 const app = fastity()
+const prisma = new PrismaClient()
 
 //ROTA - QUANDO ALGUEM ACESSAR O ENDERECO /HELLO, QUERO QUE DEVOLVA "HELLO WORLD"
-app.get('/hello', () => {
-    return 'Hello World!'
+app.get('/users', async () => {
+    const users = await prisma.user.findMany()
+    return users
 })
 
 //CRIAR API - PARA CRIAR UMA API PRECISA DE TER UM SERVIDOR HTTP. SERVIDOR HTTP É O ENDEREÇO ONDE O FRONT-END FAZ REQUISIÇÕES HTTP (GET , POST, DELETE, PUT, PATCH...). AS REQUISIÇÕES VÃO PARA O SERVIDOR, QUE INTERPRETA ESSAS REQUISIÇÕES E DEVOLVE UMA RESPOSTA PARA ELAS.
