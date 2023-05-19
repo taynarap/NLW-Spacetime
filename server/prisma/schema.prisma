@@ -11,14 +11,14 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  nome      String
+  id        String @id @default(uuid())
+  name      String
   //GitHub Info
-  githubId  Int      @unique
+  githubId  Int    @unique
   login     String
   avatarUrl String
 
-  memories    Memory[]
+  memories Memory[]
 }
 
 model Memory {
@@ -32,4 +32,3 @@ model Memory {
 
   use User @relation(fields: [userId], references: [id])
 }
-
