@@ -11,6 +11,25 @@ datasource db {
 }
 
 model User {
-  id   String @id @default(uuid()) //ISTO SIGNIFICA QUE O ID EH UMA CHAVE PRIMARIA. UNIQUE UNIVERSAL ID -UUID
-  nome String
+  id        String   @id @default(uuid())
+  nome      String
+  //GitHub Info
+  githubId  Int      @unique
+  login     String
+  avatarUrl String
+
+  memories    Memory[]
 }
+
+model Memory {
+  id     String @id @default(uuid())
+  userId String
+
+  coverUrl  String
+  content   String
+  isPublic  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  use User @relation(fields: [userId], references: [id])
+}
+
