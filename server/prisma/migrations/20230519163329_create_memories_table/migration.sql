@@ -1,3 +1,11 @@
+/*
+  Warnings:
+
+  - Added the required column `avatarUrl` to the `User` table without a default value. This is not possible if the table is not empty.
+  - Added the required column `githubId` to the `User` table without a default value. This is not possible if the table is not empty.
+  - Added the required column `login` to the `User` table without a default value. This is not possible if the table is not empty.
+
+*/
 -- CreateTable
 CREATE TABLE "Memory" (
     "id" TEXT NOT NULL PRIMARY KEY,
@@ -13,8 +21,8 @@ CREATE TABLE "Memory" (
 PRAGMA foreign_keys=OFF;
 CREATE TABLE "new_User" (
     "id" TEXT NOT NULL PRIMARY KEY,
+    "githubId" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "githubId" INTEGER NOT NULL,
     "login" TEXT NOT NULL,
     "avatarUrl" TEXT NOT NULL
 );
