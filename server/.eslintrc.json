@@ -1,8 +1,14 @@
 {
-    "extends":[
-        "@rockseat/eslint-config/node" 
-    ],
-    "rules": {
-        "camelcase": "off"
-    }
+  "extends":[
+    "@rocketseat/eslint-config/node"
+  ],
+  "rules": {
+    "camelcase": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
+  }
 }

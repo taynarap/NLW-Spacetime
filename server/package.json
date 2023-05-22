@@ -1,5 +1,5 @@
 {
-  "name": "nlw-spacetime",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,9 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
-    "@types/node": "^20.1.5",
+    "@types/node": "^20.2.1",
     "dotenv": "^16.0.3",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "prisma": "^4.14.1",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4"
