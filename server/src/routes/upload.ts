@@ -19,9 +19,8 @@ export async function uploadRoutes(app: FastifyInstance) {
     if (!upload) {
       return reply.status(400).send();
     }
-
     // Only accept files that are images or videos
-    const mimeTypeRegex = /^(image | video) \/[a-zA-Z]+/;
+    const mimeTypeRegex = /^(image|video)\/[a-zA-Z]+/;
     const isValidFileFormat = mimeTypeRegex.test(upload.mimetype);
 
     if (!isValidFileFormat) {
@@ -31,15 +30,17 @@ export async function uploadRoutes(app: FastifyInstance) {
     // confirm if file with the same name exists before saving
     const fileId = randomUUID();
     const extension = extname(upload.filename);
+
     const fileName = fileId.concat(extension);
 
     const writeStream = createWriteStream(
-      resolve(__dirname, "../../uploads/", fileName)
+      resolve(__dirname, "..", "..", "uploads", fileName)
     );
+
     await pump(upload.file, writeStream);
 
     const fullUrl = request.protocol.concat("://").concat(request.hostname);
-    const fileUrl = new URL(`/uploads/${fileName}`, fullUrl).toString;
+    const fileUrl = new URL(`/uploads/${fileName}`, fullUrl).toString();
 
     return { fileUrl };
   });
