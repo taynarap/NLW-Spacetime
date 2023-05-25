@@ -1,7 +1,7 @@
 # NLW Spacetime
 
 ## 🔎 Projeto
-Projecto desenvolvido em front-end e back-end durante o workshop intensivo da Rocketseat, entre os dias 15 a 21 de Maio. Foi desolvido tanto para a web quanto para mobile, e consiste numa "cápsula do tempo" em que o usuário pode criar e guardar memórias sobre eventos especiais da sua vida.
+Projecto desenvolvido em front-end e back-end durante o workshop intensivo da Rocketseat, entre os dias 15 a 19 de Maio. Foi desolvido tanto para a web quanto para mobile, e consiste numa "cápsula do tempo" em que o usuário pode criar e guardar memórias sobre eventos especiais da sua vida.
 
 ## ⚙️ Tecnologias
 
