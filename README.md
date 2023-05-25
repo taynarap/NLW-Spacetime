@@ -1,11 +1,11 @@
-# NLW Spacetime
+<h1 align="center">
+  NLW Spacetime
+</h1>
 
-## 🔎 Projeto
-Projecto desenvolvido em front-end e back-end durante o workshop intensivo da Rocketseat, entre os dias 15 a 19 de Maio. Foi desolvido tanto para a web quanto para mobile, e consiste numa "cápsula do tempo" em que o usuário pode criar e guardar memórias sobre eventos especiais da sua vida.
+## 🔎 Project
+Project developed in front and back-end during the intensive workshop provided by the online school Rocketseat, from 15th to 19th of May. It was developed for the web and mobile, and it's a "time capsule" where the user can create and save memories from special life events.
 
-## ⚙️ Tecnologias
-
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+## ⚙️ Technologies
 
 ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=React)&nbsp;
 ![Typescript](https://img.shields.io/badge/-Typescript-05122A?style=flat&logo=Typescript)&nbsp;
